@@ -103,11 +103,10 @@
 		3B790C7C2578176C009E3E37 /* HHJ_Capstone_2020 */ = {
 			isa = PBXGroup;
 			children = (
+				3B790CC92578A843009E3E37 /* Day1 */,
+				3B790CC82578A82D009E3E37 /* Main */,
 				3B790C7D2578176C009E3E37 /* AppDelegate.swift */,
 				3B790C7F2578176C009E3E37 /* SceneDelegate.swift */,
-				3B790CB625782B68009E3E37 /* MainMenuViewController.swift */,
-				3B790CBB25782B84009E3E37 /* ChapterMenuViewController.swift */,
-				3B790CC025782BB9009E3E37 /* DayMenuViewController.swift */,
 				3B790C832578176C009E3E37 /* Main.storyboard */,
 				3B790C8625781772009E3E37 /* Assets.xcassets */,
 				3B790C8825781772009E3E37 /* LaunchScreen.storyboard */,
@@ -132,6 +131,23 @@
 				3B790CA125781772009E3E37 /* Info.plist */,
 			);
 			path = HHJ_Capstone_2020UITests;
+			sourceTree = "<group>";
+		};
+		3B790CC82578A82D009E3E37 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3B790CB625782B68009E3E37 /* MainMenuViewController.swift */,
+				3B790CBB25782B84009E3E37 /* ChapterMenuViewController.swift */,
+				3B790CC025782BB9009E3E37 /* DayMenuViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3B790CC92578A843009E3E37 /* Day1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Day1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
