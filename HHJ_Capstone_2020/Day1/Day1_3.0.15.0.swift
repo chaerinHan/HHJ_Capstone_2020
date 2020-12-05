@@ -2,23 +2,34 @@
 //  Day1_3.0.15.0.swift
 //  HHJ_Capstone_2020
 //
-//  Created by Chaerin Han on 2020/12/03.
+//  Created by Chaerin Han on 2020/12/05.
 //
 
 import UIKit
+import AVFoundation
+
+var soundEffect: AVAudioPlayer?
 
 class Day1_3_0_15_0: UIViewController {
 
-    @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet weak var recordButton: UIButton!
-    @IBAction func audioButton(_ sender: Any) {
+    func playAudio() {
+        let url = Bundle.main.url(forResource: "15.0.0", withExtension: "mp3")
+            if let url = url {
+                do{
+                    soundEffect = try AVAudioPlayer(contentsOf: url)
+                    guard let sound = soundEffect else {return}
+                    sound.prepareToPlay()
+                    sound.play()
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+            }
     }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        playAudio()
         // Do any additional setup after loading the view.
     }
     

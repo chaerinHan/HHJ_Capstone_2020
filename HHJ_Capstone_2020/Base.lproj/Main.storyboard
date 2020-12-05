@@ -79,7 +79,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChapterCell" id="7VV-ob-Cl9">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChapterCell" id="7VV-ob-Cl9" customClass="ChapterCell" customModule="HHJ_Capstone_2020" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k8t-a8-a5e">
@@ -98,7 +98,7 @@
                                         <color key="backgroundColor" red="0.89421731579999997" green="1" blue="0.5791705278" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                         <size key="customSize" width="169" height="169"/>
                                         <connections>
-                                            <outlet property="chapterLabel" destination="RLs-lq-y6l" id="WC1-XM-aE5"/>
+                                            <outlet property="chapterLabel" destination="RLs-lq-y6l" id="tTN-kb-1AK"/>
                                             <segue destination="Bld-nF-LCO" kind="push" id="bpZ-Be-JJA"/>
                                         </connections>
                                     </collectionViewCell>
@@ -113,6 +113,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="vkZ-4k-PUF"/>
+                    <connections>
+                        <outlet property="collectionView" destination="7VV-ob-Cl9" id="LQo-qk-JYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfU-Qg-FH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="-548" y="3113"/>
         </scene>
-        <!--View Controller-->
+        <!--Day1_3.0.15.0.0-->
         <scene sceneID="B3c-Uc-equ">
             <objects>
-                <viewController id="hxo-1n-XjP" sceneMemberID="viewController">
+                <viewController title="Day1_3.0.15.0.0" id="hxo-1n-XjP" customClass="Day1_3_0_15_0" customModule="HHJ_Capstone_2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5bJ-Bi-coG">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +335,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="bjv-8c-PIj" kind="push" id="kNP-1L-1oI"/>
+                                    <segue destination="Zvd-hk-AyV" kind="push" id="Uwf-OW-6P1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="죄송하지만, 앞쪽과 뒤쪽 자리밖에 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XT-PG-VVj">
@@ -357,12 +360,122 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pp-y1-AUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548.4375" y="4534.7826086956529"/>
+            <point key="canvasLocation" x="-548" y="4583"/>
         </scene>
-        <!--Day1_3.0.15.0.10-->
+        <!--View Controller-->
+        <scene sceneID="rU7-Jc-qjz">
+            <objects>
+                <viewController id="Zvd-hk-AyV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ed-He-9gn">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="관광시설 예약하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yye-5r-JBQ">
+                                <rect key="frame" x="370" y="20" width="150" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The front row sounds good. How much are the tickets?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqP-DW-poN">
+                                <rect key="frame" x="252" y="124" width="394" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9S-QP-f6T">
+                                <rect key="frame" x="58" y="115" width="153" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwB-b5-ivj">
+                                <rect key="frame" x="806" y="347" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="앞 줄이 좋을 것 같네요. 티켓은 얼마죠?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lth-D8-oUN">
+                                <rect key="frame" x="252" y="228" width="464" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gXE-A3-gav"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kbB-ag-WVi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWK-W1-W8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-548.4375" y="5282.608695652174"/>
+        </scene>
+        <!--Day1.2.1-->
+        <scene sceneID="Z0C-KN-JS0">
+            <objects>
+                <viewController title="Day1.2.1" id="HqH-Cc-Tie" customClass="Day1_2_1ViewController" customModule="HHJ_Capstone_2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P7F-m2-9EL">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="앞 쪽에 자리 있어요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdT-rq-641">
+                                <rect key="frame" x="354" y="20" width="195" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are there any seats in the front?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="260-jw-HLO">
+                                <rect key="frame" x="251" y="127" width="394" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="앞 쪽 자리에 남는거 있나요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-Xn-Ka4">
+                                <rect key="frame" x="354" y="197" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYi-G8-cgB">
+                                <rect key="frame" x="285" y="255.5" width="53" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="mic.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="recordButton:" destination="HqH-Cc-Tie" eventType="touchUpInside" id="KZZ-RP-agE"/>
+                                    <action selector="recordButton:" destination="3Je-9F-Uz2" eventType="touchUpInside" id="nI3-Tp-r8c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-5I-yWO">
+                                <rect key="frame" x="525" y="270" width="36" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="headphones" catalog="system"/>
+                                <connections>
+                                    <action selector="audioButton:" destination="bjv-8c-PIj" eventType="touchUpInside" id="tRU-S5-VDn"/>
+                                    <action selector="listenButton:" destination="3Je-9F-Uz2" eventType="touchUpInside" id="BTM-2T-EIu"/>
+                                    <action selector="listenButton:" destination="HqH-Cc-Tie" eventType="touchUpInside" id="TUH-WT-JlS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wvf-5M-bAI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="listenButton" destination="GWh-5I-yWO" id="U7q-0q-Z8Z"/>
+                        <outlet property="recordButton" destination="nYi-G8-cgB" id="3hF-v3-LQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezB-GH-ZoJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3Je-9F-Uz2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-548.4375" y="5975.36231884058"/>
+        </scene>
+        <!--Day1_3.0.15.0.6-->
         <scene sceneID="xzm-OI-Xof">
             <objects>
-                <viewController title="Day1_3.0.15.0.10" id="bjv-8c-PIj" customClass="Day1_3_0_15_0" customModule="HHJ_Capstone_2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Day1_3.0.15.0.6" id="bjv-8c-PIj" customClass="Day1_3_0_15_0" customModule="HHJ_Capstone_2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tFA-AM-1jA">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,14 +524,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-5I-yWO">
-                                <rect key="frame" x="641" y="77" width="36" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="headphones" catalog="system"/>
-                                <connections>
-                                    <action selector="audioButton:" destination="bjv-8c-PIj" eventType="touchUpInside" id="tRU-S5-VDn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wlg-ao-zmu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -431,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qK1-d9-9cr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548.4375" y="5279.7101449275369"/>
+            <point key="canvasLocation" x="-548" y="6662"/>
         </scene>
     </scenes>
     <resources>

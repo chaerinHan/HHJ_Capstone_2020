@@ -7,63 +7,42 @@
 
 import UIKit
 
-class ChapterMenuViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ChapterMenuViewController: UIViewController, UICollectionViewDataSource{
     
-    var chapterList = ["ch1", "ch2", "ch3","ch4", "ch5", "ch6", "ch7", "ch8", "ch9", "ch10",
-                       "ch11", "ch12", "ch13", "ch14", "ch15", "ch16", "ch17", "ch18", "ch19", "ch20"]
+    let viewModel = ChapterViewModel()
     
-    class ChapterCell: UICollectionViewCell {
-        @IBOutlet weak var chapterLabel: UILabel!
+    // UICollectionViewDataSource
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChapterCell", for: indexPath) as? ChapterCell else {
+            return UICollectionViewCell()
+        }
+        
+        let info = viewModel.chapterInfo(at: indexPath.row)
+        cell.updateUI(info)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let itemSpacing: CGFloat = 10
+        let textAreaHeight: CGFloat = 65
+        
+        let width: CGFloat = (collectionView.bounds.width - itemSpacing)/2
+        let height: CGFloat = width * 10/7 + textAreaHeight
+        return CGSize(width: width, height: height)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
     }
+  
     
-    // UICollectionViewDataSource
-    // 몇 개 보여줄까?
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
-    }
-    // 셀 어떻게 표현할까?
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChapterCell", for: indexPath)
-        // cell.lbl.text = list[indexPath.row]
-//        cell.chapterLabel.text = chapterList[indexPath.row]
-        return cell
-    }
-    
-    // UICollectionViewDelegate
-    // 셀이 클릭되었을 때 어떡할꺼야?
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "showDetail", sender: indexPath.item)
-//    }
-    
-    // UICollectionViewFlowLayout
-    // cell size
-    // CGSize: 너비와 높이 계산해야함
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       // let flowLayout = UICollectionViewFlowLayout()
-       // let itemSpacing: CGFloat = 5// item간 간격
-        
-       // flowLayout.minimumInterItemSpacing = 10
-       // flowLayout.minimumLineSpacing = 10
-        
-        // 5개씩 4줄
-       // let width: CGFloat = (collectionView.bounds.width - itemSpacing) / 5
-       // let height: CGFloat = width
-        let fullWidth: CGFloat = collectionView.bounds.height / 4
-        let width: CGFloat = fullWidth
-        let height: CGFloat = width
-        return CGSize(width: width, height: height)
-    }
-
-    // 옆 간격
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 1
-        }
     
     /*
     // MARK: - Navigation
@@ -75,4 +54,31 @@ class ChapterMenuViewController: UIViewController, UICollectionViewDataSource, U
     }
     */
 
+}
+
+class ChapterViewModel {
+
+    let chapterInfoList: [ChapterInfo] = [
+        ChapterInfo(chapter:"ch 1"), ChapterInfo(chapter:"ch 2"), ChapterInfo(chapter:"ch 3"), ChapterInfo(chapter:"ch 4"), ChapterInfo(chapter:"ch 5"),
+        ChapterInfo(chapter:"ch 6"), ChapterInfo(chapter:"ch 7"), ChapterInfo(chapter:"ch 8"), ChapterInfo(chapter:"ch 9"),ChapterInfo(chapter:"ch 10"),
+        ChapterInfo(chapter:"ch 11"), ChapterInfo(chapter:"ch 12"), ChapterInfo(chapter:"ch 13"), ChapterInfo(chapter:"ch 14"), ChapterInfo(chapter:"ch 15"),
+        ChapterInfo(chapter:"ch 16"), ChapterInfo(chapter:"ch 17"), ChapterInfo(chapter:"ch 18"), ChapterInfo(chapter:"ch 19"), ChapterInfo(chapter:"ch 20")
+    ]
+    var numOfBountyInfoList: Int {
+        return chapterInfoList.count
+    }
+    
+    func chapterInfo(at index: Int) -> ChapterInfo {
+        return chapterInfoList[index]
+    }
+}
+
+class ChapterCell: UICollectionViewCell {
+    
+    @IBOutlet weak var chapterLabel: UILabel!
+    func updateUI(_ chapterInfo: ChapterInfo) {
+//        imgView.image = bountyInfo.image
+        chapterLabel.text = chapterInfo.chapter
+//        bountyLabel.text = "\(bountyInfo.bounty)"
+    }
 }
