@@ -19,6 +19,7 @@ class Day1_3_1_ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var fourthImg: UIImageView!
     @IBOutlet var fifthImg: UIView!
     @IBOutlet weak var progressbarImg: UIImageView!
+    @IBOutlet weak var checkLabel: UILabel!
     
     // 변수
     var user_recorded: String! // 사용자가 말한 문장 저장
@@ -156,6 +157,7 @@ class Day1_3_1_ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 // 내가 말한 문장 받아오기
                 self.user_recorded = result?.bestTranscription.formattedString
 //                self.myTextView.text = result?.bestTranscription.formattedString
+                self.checkLabel.text = result?.bestTranscription.formattedString
                 isFinal = (result?.isFinal)!
             }
             
