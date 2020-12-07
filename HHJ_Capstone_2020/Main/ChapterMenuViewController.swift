@@ -32,9 +32,9 @@ extension ChapterMenuViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CSCollectionViewCell
             
-        cell.backgroundColor = .lightGray
+//        cell.backgroundColor = .lightGray
         cell.lbl.text = list[indexPath.row]
-        cell.lbl.backgroundColor = .yellow
+//        cell.lbl.backgroundColor = .yellow
             
         return cell
     }
@@ -56,7 +56,7 @@ extension ChapterMenuViewController: UICollectionViewDelegateFlowLayout {
     // cell 사이즈( 옆 라인을 고려하여 설정 )
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = collectionView.frame.width / 3 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
+        let width = collectionView.frame.width / 5 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
         print("collectionView width=\(collectionView.frame.width)")
         print("cell하나당 width=\(width)")
         print("root view width = \(self.view.frame.width)")

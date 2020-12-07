@@ -41,9 +41,9 @@ extension DayMenuViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "daycell", for: indexPath) as! DayCollectionViewCell
         
-        cell.backgroundColor = .lightGray
+//        cell.backgroundColor = .lightGray
         cell.dayLabel.text = list[indexPath.row]
-        cell.dayLabel.backgroundColor = .yellow
+//        cell.dayLabel.backgroundColor = .yellow
         
         return cell
     }
@@ -65,7 +65,7 @@ extension DayMenuViewController: UICollectionViewDelegateFlowLayout {
 // cell 사이즈( 옆 라인을 고려하여 설정 )
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let width = collectionView.frame.width / 3 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
+        let width = collectionView.frame.width / 4 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
         print("collectionView width=\(collectionView.frame.width)")
         print("cell하나당 width=\(width)")
         print("root view width = \(self.view.frame.width)")

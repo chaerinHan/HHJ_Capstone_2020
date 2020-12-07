@@ -18,7 +18,6 @@
 		3B790CBC25782B84009E3E37 /* ChapterMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790CBB25782B84009E3E37 /* ChapterMenuViewController.swift */; };
 		3B790CE2257AF08D009E3E37 /* Day1_3.0.15.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790CE1257AF08D009E3E37 /* Day1_3.0.15.0.swift */; };
 		3B790CE8257AF2D1009E3E37 /* 15.0.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B790CE7257AF2D1009E3E37 /* 15.0.0.mp3 */; };
-		3B790CEF257AFF52009E3E37 /* ChapterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790CEE257AFF52009E3E37 /* ChapterInfo.swift */; };
 		3B790D0C257BE797009E3E37 /* Day1_2_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790D0B257BE797009E3E37 /* Day1_2_1ViewController.swift */; };
 		3B790D11257BF087009E3E37 /* Day1_3_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790D10257BF087009E3E37 /* Day1_3_1_ViewController.swift */; };
 		3B790D19257D6681009E3E37 /* DayMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790D18257D6681009E3E37 /* DayMenuViewController.swift */; };
@@ -59,7 +58,6 @@
 		3B790CBB25782B84009E3E37 /* ChapterMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterMenuViewController.swift; sourceTree = "<group>"; };
 		3B790CE1257AF08D009E3E37 /* Day1_3.0.15.0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1_3.0.15.0.swift; sourceTree = "<group>"; };
 		3B790CE7257AF2D1009E3E37 /* 15.0.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 15.0.0.mp3; path = "../../../../../../Downloads/자료/15.0.0.mp3"; sourceTree = "<group>"; };
-		3B790CEE257AFF52009E3E37 /* ChapterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterInfo.swift; sourceTree = "<group>"; };
 		3B790D0B257BE797009E3E37 /* Day1_2_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1_2_1ViewController.swift; sourceTree = "<group>"; };
 		3B790D10257BF087009E3E37 /* Day1_3_1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1_3_1_ViewController.swift; sourceTree = "<group>"; };
 		3B790D18257D6681009E3E37 /* DayMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMenuViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			children = (
 				3B790CB625782B68009E3E37 /* MainMenuViewController.swift */,
 				3B790CBB25782B84009E3E37 /* ChapterMenuViewController.swift */,
-				3B790CEE257AFF52009E3E37 /* ChapterInfo.swift */,
 				3B790D18257D6681009E3E37 /* DayMenuViewController.swift */,
 			);
 			path = Main;
@@ -313,7 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B790CB725782B68009E3E37 /* MainMenuViewController.swift in Sources */,
-				3B790CEF257AFF52009E3E37 /* ChapterInfo.swift in Sources */,
 				3B790CBC25782B84009E3E37 /* ChapterMenuViewController.swift in Sources */,
 				3B790CE2257AF08D009E3E37 /* Day1_3.0.15.0.swift in Sources */,
 				3B790C7E2578176C009E3E37 /* AppDelegate.swift in Sources */,
