@@ -21,6 +21,27 @@ class ChapterMenuViewController: UIViewController {
             self.collectionView.dataSource = self
             
     }
+    // MARK: - Navigation
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            // Get the new view controller using segue.destination.
+//            // Pass the selected object to the new view controller.
+//            if segue.identifier == "sgDetail" {
+//                let cell = sender as! UITableViewCell
+//                let indexPath = self.tvListView.indexPath(for: cell)
+//                let detailView = segue.destination as! DetailViewController
+//                detailView.receiveItem(items[((indexPath as NSIndexPath?)?.row)!])
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToDayMenu" { // 챕터 셀 누르면 나올 화면
+            let cell = sender as! UICollectionViewCell
+            let indexPath = self.collectionView.indexPath(for: cell )
+            let dayView = segue.destination as! DayMenuViewController
+            dayView.receiveItem(list[((indexPath as NSIndexPath?)?.row)!])
+        }
+    }
 }
     // cell data
 extension ChapterMenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
