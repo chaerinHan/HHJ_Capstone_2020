@@ -9,7 +9,6 @@ import UIKit
 
 class DayMenuViewController: UIViewController {
 
-    
     @IBOutlet weak var chapterLabel: UILabel!
     
     var receiveItem = ""

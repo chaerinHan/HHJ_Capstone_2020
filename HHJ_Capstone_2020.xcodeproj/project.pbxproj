@@ -20,8 +20,6 @@
 		3B790D0C257BE797009E3E37 /* Day1_2_1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790D0B257BE797009E3E37 /* Day1_2_1ViewController.swift */; };
 		3B790D11257BF087009E3E37 /* Day1_3_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790D10257BF087009E3E37 /* Day1_3_1_ViewController.swift */; };
 		3B790D19257D6681009E3E37 /* DayMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B790D18257D6681009E3E37 /* DayMenuViewController.swift */; };
-		3B790D2D257F473E009E3E37 /* Logo_png_58 px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D2B257F473E009E3E37 /* Logo_png_58 px.png */; };
-		3B790D2E257F473E009E3E37 /* Logo_png_87 px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D2C257F473E009E3E37 /* Logo_png_87 px.png */; };
 		3B790D3D257F493C009E3E37 /* 15.0.4-느린 버전.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D32257F493B009E3E37 /* 15.0.4-느린 버전.mp3 */; };
 		3B790D3E257F493C009E3E37 /* 15.0.2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D33257F493C009E3E37 /* 15.0.2.mp3 */; };
 		3B790D3F257F493C009E3E37 /* 15.0.0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D34257F493C009E3E37 /* 15.0.0.mp3 */; };
@@ -42,6 +40,8 @@
 		3B790D5E257F4D7E009E3E37 /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D55257F4D7E009E3E37 /* NotoSansMonoCJKkr-Regular.otf */; };
 		3B790D5F257F4D7E009E3E37 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D56257F4D7E009E3E37 /* NotoSansCJKkr-Medium.otf */; };
 		3B790D60257F4D7E009E3E37 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D57257F4D7E009E3E37 /* NotoSansCJKkr-Regular.otf */; };
+		3B790D6D257F8ADD009E3E37 /* Logo_87px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D6B257F8ADD009E3E37 /* Logo_87px.png */; };
+		3B790D6E257F8ADD009E3E37 /* Logo_58px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B790D6C257F8ADD009E3E37 /* Logo_58px.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,6 @@
 		3B790D0B257BE797009E3E37 /* Day1_2_1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1_2_1ViewController.swift; sourceTree = "<group>"; };
 		3B790D10257BF087009E3E37 /* Day1_3_1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1_3_1_ViewController.swift; sourceTree = "<group>"; };
 		3B790D18257D6681009E3E37 /* DayMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMenuViewController.swift; sourceTree = "<group>"; };
-		3B790D2B257F473E009E3E37 /* Logo_png_58 px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo_png_58 px.png"; path = "../../../../../../../Downloads/Logo_png_58 px.png"; sourceTree = "<group>"; };
-		3B790D2C257F473E009E3E37 /* Logo_png_87 px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo_png_87 px.png"; path = "../../../../../../../Downloads/Logo_png_87 px.png"; sourceTree = "<group>"; };
 		3B790D32257F493B009E3E37 /* 15.0.4-느린 버전.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "15.0.4-느린 버전.mp3"; path = "../../../../../../../Desktop/캡스톤/자료/15.0.4-느린 버전.mp3"; sourceTree = "<group>"; };
 		3B790D33257F493C009E3E37 /* 15.0.2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 15.0.2.mp3; path = "../../../../../../../Desktop/캡스톤/자료/15.0.2.mp3"; sourceTree = "<group>"; };
 		3B790D34257F493C009E3E37 /* 15.0.0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 15.0.0.mp3; path = "../../../../../../../Desktop/캡스톤/자료/15.0.0.mp3"; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		3B790D55257F4D7E009E3E37 /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansMonoCJKkr-Regular.otf"; path = "../../../../../../Downloads/NotoSansCJKkr-hinted/NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		3B790D56257F4D7E009E3E37 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Medium.otf"; path = "../../../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		3B790D57257F4D7E009E3E37 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Regular.otf"; path = "../../../../../../Downloads/NotoSansCJKkr-hinted/NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		3B790D6B257F8ADD009E3E37 /* Logo_87px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo_87px.png; path = ../../../../../../../Downloads/Logo_87px.png; sourceTree = "<group>"; };
+		3B790D6C257F8ADD009E3E37 /* Logo_58px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo_58px.png; path = ../../../../../../../Downloads/Logo_58px.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,8 +252,8 @@
 		3B790D22257F3BB5009E3E37 /* Logo */ = {
 			isa = PBXGroup;
 			children = (
-				3B790D2B257F473E009E3E37 /* Logo_png_58 px.png */,
-				3B790D2C257F473E009E3E37 /* Logo_png_87 px.png */,
+				3B790D6C257F8ADD009E3E37 /* Logo_58px.png */,
+				3B790D6B257F8ADD009E3E37 /* Logo_87px.png */,
 			);
 			path = Logo;
 			sourceTree = "<group>";
@@ -392,6 +392,7 @@
 				3B790D60257F4D7E009E3E37 /* NotoSansCJKkr-Regular.otf in Resources */,
 				3B790C8A25781772009E3E37 /* LaunchScreen.storyboard in Resources */,
 				3B790D44257F493C009E3E37 /* 15.0.1.mp3 in Resources */,
+				3B790D6E257F8ADD009E3E37 /* Logo_58px.png in Resources */,
 				3B790D3F257F493C009E3E37 /* 15.0.0.mp3 in Resources */,
 				3B790C8725781772009E3E37 /* Assets.xcassets in Resources */,
 				3B790D59257F4D7E009E3E37 /* NotoSansCJKkr-Light.otf in Resources */,
@@ -400,15 +401,14 @@
 				3B790D42257F493C009E3E37 /* 15.0.16.mp3 in Resources */,
 				3B790D5D257F4D7E009E3E37 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				3B790D40257F493C009E3E37 /* 15.0.6.mp3 in Resources */,
-				3B790D2E257F473E009E3E37 /* Logo_png_87 px.png in Resources */,
 				3B790D5C257F4D7E009E3E37 /* NotoSansCJKkr-DemiLight.otf in Resources */,
 				3B790D46257F493C009E3E37 /* 15.0.10.mp3 in Resources */,
 				3B790D5B257F4D7E009E3E37 /* NotoSansCJKkr-Thin.otf in Resources */,
 				3B790D43257F493C009E3E37 /* 15.0.8.mp3 in Resources */,
 				3B790D47257F493C009E3E37 /* 15.0.3.mp3 in Resources */,
 				3B790D45257F493C009E3E37 /* 15.0.4.mp3 in Resources */,
-				3B790D2D257F473E009E3E37 /* Logo_png_58 px.png in Resources */,
 				3B790D5F257F4D7E009E3E37 /* NotoSansCJKkr-Medium.otf in Resources */,
+				3B790D6D257F8ADD009E3E37 /* Logo_87px.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

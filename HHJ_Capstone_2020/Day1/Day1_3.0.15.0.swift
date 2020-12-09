@@ -23,9 +23,6 @@ class Day1_3_0_15_0: UIViewController {
                     NotificationCenter.default.addObserver(self,selector:Selector(("playerDidFinishPlaying")), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: url)
                     sound.prepareToPlay()
                     sound.play()
-                    if sound.play() {
-                        nextButton.isHidden = true
-                    }
                     
                 } catch let error {
                     print(error.localizedDescription)
@@ -33,26 +30,26 @@ class Day1_3_0_15_0: UIViewController {
             }
     }
 
-//    @objc func playerDidFinishPlaying(sender: Notification) {
-//        // Your code here
-//        // isHidden = false 면 보여준다
-//        nextButton.isHidden = false
-//
-//    }
+    @objc func playerDidFinishPlaying(sender: Notification) {
+        // Your code here
+        // isHidden = false 면 보여준다
+        nextButton.isHidden = false
+
+    }
     func playerDidFinishPlaying() {
     // Your code here
         nextButton.isHidden = false
     }
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        playAudio()
         // Do any additional setup after loading the view.
-        nextButton.isHidden = true
-        playerDidFinishPlaying()
+        super.viewDidLoad()
+//        nextButton.isHidden = true // 화면 처음 실행할 때는 "다음페이지"버튼 숨기기
+        playAudio()
+//        playerDidFinishPlaying()
+//        nextButton.isHidden = true
         
     }
-    
+
 
     /*
     // MARK: - Navigation

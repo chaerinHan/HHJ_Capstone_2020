@@ -23,7 +23,7 @@ class Day1_3_1_ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func nextPage (_ sender: Any ) {
-        if record_count <= 6 {
+        if record_count <= 5 {
             nextButton.isHidden = true
         }
         else {
@@ -33,7 +33,7 @@ class Day1_3_1_ViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     // 변수
     var user_recorded: String! // 사용자가 말한 문장 저장
-    var record_count: Int! = 1 // 말하는 횟수 제한
+    var record_count: Int! = 0 // 말하는 횟수 제한
     
     
     // 말한 것을 인식
@@ -64,45 +64,38 @@ class Day1_3_1_ViewController: UIViewController, SFSpeechRecognizerDelegate {
         let answer_split = answer?.split(separator: " ")
         let user_recorded_split = user_recorded?.split(separator: " ")
         
-        if answer_split == user_recorded_split {
-            if record_count == 2 {
+        if answer_split == user_recorded_split { // 일치 할 경우
+            if record_count == 1 {
                 firstImg.backgroundColor = UIColor.blue
             }
-            else if record_count == 3 {
+            else if record_count == 2 {
                 secondImg.backgroundColor = UIColor.blue
             }
-            else if record_count == 4 {
+            else if record_count == 3 {
                 thirdImg.backgroundColor = UIColor.blue
             }
-            else if record_count == 5 {
+            else if record_count == 4 {
                 fourthImg.backgroundColor = UIColor.blue
             }
-            else if record_count == 6 {
+            else if record_count == 5 {
                 fifthImg.backgroundColor = UIColor.blue
             }
-            else {
-                // 혹시나 6번 할까봐
-            }
-            
         }
-        else {
-            if record_count == 2 {
+        else { // 불일치 할 경우
+            if record_count == 1 {
                 firstImg.backgroundColor = UIColor.red
             }
-            else if record_count == 3 {
+            else if record_count == 2 {
                 secondImg.backgroundColor = UIColor.red
             }
-            else if record_count == 4 {
+            else if record_count == 3 {
                 thirdImg.backgroundColor = UIColor.red
             }
-            else if record_count == 5 {
+            else if record_count == 4 {
                 fourthImg.backgroundColor = UIColor.red
             }
-            else if record_count == 6 {
+            else if record_count == 5 {
                 fifthImg.backgroundColor = UIColor.red
-            }
-            else {
-                // 혹시나 6번 할까봐
             }
         }
     }
@@ -110,7 +103,7 @@ class Day1_3_1_ViewController: UIViewController, SFSpeechRecognizerDelegate {
     // MARK: - Speech To Text
     @IBAction func speechToText(_ sender: Any) {
         // 횟수 제한
-        if record_count <= 6 {
+        if record_count <= 5 {
             if audioEngine.isRunning { // 현재 음성인식 수행중이라면
                         audioEngine.stop() // 오디오 입력 중단
                         recognitionRequest?.endAudio() // 음성인식 역시 중단
